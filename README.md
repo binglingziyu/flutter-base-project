@@ -14,16 +14,28 @@
 
 # 项目初始化方法
 
-修改目录名
 ```shell script
-$ mv flutter-base-project questionnaire
-```
+// 删除 .git 目录
+$ cd flutter-base-project
+$ rm -rf .git
 
-创建 Flutter 项目
-```shell script
+// 修改目录名
+$ mv flutter-base-project questionnaire
+
 $ cd questionnaire
 
+// 创建 Flutter 项目
 $ flutter create --org com.ihubin --project-name questionnaire .
+
+//-t, --template=<type>          [app](default)\[module]\[package]\[plugin]
+//--org                          The organization
+//--project-name                 The project name
+//-i, --ios-language             [objc, swift (default)]
+//-a, --android-language         [java, kotlin (default)]
+
+
+// 打包 APK
+$ flutter build apk --target-platform android-arm64
 ```
 
 
